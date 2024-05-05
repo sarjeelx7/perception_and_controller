@@ -80,12 +80,12 @@ You will use trained model that you trained in previous homework. Inside of a [*
 
 ### Guide to Fill in the `evaluate` Function
 
-In this task, you are expected to fill in the [***evaluate***](Perception/evaluate.py) function provided to you. This function is designed to process an input image and extract segmented lanes from it. 
+In this task, you are expected to fill in the [***evaluate***](https://github.com/MrSkyGodz/Perception-Project/blob/main/evaluate.py) function provided to you. This function is designed to process an input image and extract segmented lanes from it. 
 
 #### Instructions:
 
 1. **Take the Image and Model:**
-    - The function takes an image and [***model***](Perception/model/unet.py) as a parameter. This image will be a frame captured by the vehicle's camera.
+    - The function takes an image and [***model***](https://github.com/MrSkyGodz/Perception-Project/blob/main/model/unet.py) as a parameter. This image will be a frame captured by the vehicle's camera.
 
 2. **Perform Segmentation:**
     - Perform a segmentation process on the input image. You are expected to use a model that given through parameter to perform this segmentation.
