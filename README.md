@@ -1,20 +1,4 @@
 # Perception and Controller
-## Table of Contents
-- [Perception and Controller](#perception-and-controller)
-  - [Table of Contents](#table-of-contents)
-  - [Introduction](#introduction)
-  - [Objectives](#objectives)
-  - [Files](#files)
-  - [Perception](#perception)
-    - [Trained model](#trained-model)
-    - [Guide to Fill in the `evaluate` Function](#guide-to-fill-in-the-evaluate-function)
-      - [Instructions:](#instructions)
-      - [Notes:](#notes)
-  - [Control](#control)
-    - [Requirements:](#requirements)
-    - [Instructions:](#instructions-1)
-    - [Notes:](#notes-1)
-
 
 ## Introduction
 
@@ -31,6 +15,23 @@ The main components of the project are as follows:
 4. **Control Algorithm**: The generated waypoint is processed by a control algorithm. This algorithm ensures that the vehicle stays on the path, enabling it to reach its destination safely.
 
 The project is designed to simulate real-world scenarios and aims to contribute to the development of autonomous vehicle technology.
+
+## Table of Contents
+- [Perception and Controller](#perception-and-controller)
+  - [Table of Contents](#table-of-contents)
+  - [Introduction](#introduction)
+  - [Objectives](#objectives)
+  - [Files](#files)
+  - [Perception](#perception)
+    - [Trained model](#trained-model)
+    - [Guide to Fill in the `evaluate` Function](#guide-to-fill-in-the-evaluate-function)
+      - [Instructions:](#instructions)
+      - [Notes:](#notes)
+  - [Control](#control)
+    - [Requirements:](#requirements)
+    - [Instructions:](#instructions-1)
+    - [Notes:](#notes-1)
+
 
 ## Objectives
 Here is your objectives to do.
