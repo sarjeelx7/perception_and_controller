@@ -18,8 +18,8 @@ The project is designed to simulate real-world scenarios and aims to contribute 
 
 ## Table of Contents
 - [Perception and Controller](#perception-and-controller)
-  - [Table of Contents](#table-of-contents)
   - [Introduction](#introduction)
+  - [Table of Contents](#table-of-contents)
   - [Objectives](#objectives)
   - [Files](#files)
   - [Perception](#perception)
@@ -53,6 +53,7 @@ Overview of files.
 │   │   └── unet.py
 │   ├── README.md
 │   ├── train.py
+│   ├── evaluate.py
 │   └── utils
 │       ├── dataloader.py
 │       ├── __init__.py
@@ -75,16 +76,16 @@ The Perception package plays a crucial role in the image processing pipeline of 
 
 ### Trained model
 
-You will use trained model that you trained in previous homework. Inside of a `perception.py` script there is a `Perception` class that can take path of your trained model. 
+You will use trained model that you trained in previous homework. Inside of a [***perception.py***](perception_and_controller/perception.py) script there is a `Perception` class that can take path of your trained model. 
 
 ### Guide to Fill in the `evaluate` Function
 
-In this task, you are expected to fill in the `evaluate` function provided to you. This function is designed to process an input image and extract segmented lanes from it.
+In this task, you are expected to fill in the [***evaluate***](Perception/evaluate.py) function provided to you. This function is designed to process an input image and extract segmented lanes from it. 
 
 #### Instructions:
 
 1. **Take the Image and Model:**
-    - The function takes an image and `unet` model as a parameter. This image will be a frame captured by the vehicle's camera.
+    - The function takes an image and [***model***](Perception/model/unet.py) as a parameter. This image will be a frame captured by the vehicle's camera.
 
 2. **Perform Segmentation:**
     - Perform a segmentation process on the input image. You are expected to use a model that given through parameter to perform this segmentation.
@@ -101,7 +102,7 @@ In this task, you are expected to fill in the `evaluate` function provided to yo
 
 
 ## Control
-The controller part of this project has not been implemented yet. In this section, you are expected to develop a ROS node that will receive information by listening to the `/pose_msg` topic published by the `perception.py` script. The purpose of this controller is to track a given pose based on the received information and publish `/cmd_vel` topic to simulation for control the car.
+The controller part of this project has not been implemented yet. In this section, you are expected to develop a ROS node that will receive information by listening to the `/pose_msg` topic published by the [***perception.py***](perception_and_controller/perception.py) script. The purpose of this controller is to track a given pose based on the received information and publish `/cmd_vel` topic to simulation for control the car. Fill the [***controller.py***](perception_and_controller/controller.py).
 
 ### Requirements:
 
