@@ -33,9 +33,9 @@ The project is designed to simulate real-world scenarios and aims to contribute 
     - [Notes:](#notes-1)
 
 
-## Objectives
-Here is your objectives to do.
-* [Trained model](#trained-model)
+## Summary of Task List
+Here are your tasks to do.
+* [Training the Model](#Training-the-Model)
 * [Guide to Fill in the `evaluate` Function](#guide-to-fill-in-the-evaluate-function)
 * [Control](#control)
 
@@ -74,9 +74,9 @@ Overview of files.
 
 The Perception package plays a crucial role in the image processing pipeline of the project. It is responsible for segmenting the captured images and extracting lane segmentation. By providing segmented lanes as output, this package enables the system to understand the layout of the road and the vehicle's position relative to it. In our case the `perception.py` script utilizes your trained model and the `evaluate` function to create segmented lane from the image, extracts waypoint from segmented image and sending waypoint to the controller for the vehicle to follow accurately. The model used in `perception.py` is the one developed in our [previous homework.](https://github.com/MrSkyGodz/Perception-Project)
 
-### Trained model
+### Training the Model
 
-You will use trained model that you trained in previous homework. Inside of a [***perception.py***](perception_and_controller/perception.py) script there is a `Perception` class that can take path of your trained model. 
+You will have to train the `Unet` model given previous homework and you can use the previously trained model file or you can train a new one. Inside the [***perception.py***](perception_and_controller/perception.py) script, the `Perception` class has the `trained_model` parameter that will take your trained model file path. 
 
 ### Guide to Fill in the `evaluate` Function
 
@@ -88,21 +88,18 @@ In this task, you are expected to fill in the [***evaluate***](https://github.co
     - The function takes an image and [***model***](https://github.com/MrSkyGodz/Perception-Project/blob/main/model/unet.py) as a parameter. This image will be a frame captured by the vehicle's camera.
 
 2. **Perform Segmentation:**
-    - Perform a segmentation process on the input image. You are expected to use a model that given through parameter to perform this segmentation.
+    - Perform a segmentation process on the input image. You are expected to use a model that was given as a `parameter` to perform this segmentation.
 
-3. **Extract Lane Markings:**
-    - On the segmented image obtained from the previous step.
-
-4. **Return the Output:**
-    - Finally, return the extracted segmented lanes as output. This output will be used by the controller part to guide the vehicle's movement.
+3. **Return the Output:**
+    - Finally, return the extracted segmented lanes as output. This output will be used by the controller part to guide the vehicle's motions.
 
 #### Notes:
-- You can use previous homework.
+- You can use the previous homework or design a new one.
 
 
 
 ## Control
-The controller part of this project has not been implemented yet. In this section, you are expected to develop a ROS node that will receive information by listening to the `/pose_msg` topic published by the [***perception.py***](perception_and_controller/perception.py) script. The purpose of this controller is to track a given pose based on the received information and publish `/cmd_vel` topic to simulation for control the car. Fill the [***controller.py***](perception_and_controller/controller.py).
+The controller part of this project has not been implemented yet. In this section, you are expected to develop a ROS node that will receive information by listening to the `/pose_msg` topic published by the [***perception.py***](perception_and_controller/perception.py) script. The purpose of this controller is to track a given pose based on the received information and publish `/cmd_vel` topic to simulation for control the car. For this purpose, you are expected to fill the [***controller.py***](perception_and_controller/controller.py).
 
 ### Requirements:
 
