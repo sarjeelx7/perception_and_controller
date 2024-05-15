@@ -105,7 +105,7 @@ The controller part of this project has not been implemented yet. In this sectio
 
 1. **ROS Node:** Develop a ROS node responsible for controlling the autonomous vehicle.
 
-2. **Input Topics:** Subscribe to the `/pose_msg` topic to receive tracked pose information published by the perception module. Subscribe to the `/pose_array` topic to receive car pose information published by the simulation.
+2. **Input Topics:** Subscribe to the `/pose_msg` topic to receive tracked pose information published by the perception module. Subscribe to the `/pose_info` topic with `geometry_msgs/PoseArray.msg` to receive car pose information published by the simulation.
 
 3. **Output:** Implement control logic based on received pose information to guide the vehicle and publish to `/cmd_vel` topic.
 
