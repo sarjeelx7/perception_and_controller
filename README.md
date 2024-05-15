@@ -31,6 +31,7 @@ The project is designed to simulate real-world scenarios and aims to contribute 
     - [Requirements:](#requirements)
     - [Instructions:](#instructions-1)
     - [Notes:](#notes-1)
+  - [Communication Graph](#communication-graph)
 
 
 ## Summary of Task List
@@ -65,6 +66,7 @@ Overview of files.
 │   ├── perception.py
 │   └── rotation_utils.py
 ├── README.md
+├── graph.png
 ├── resource
 │   └── perception_and_controller
 ├── setup.cfg
@@ -124,3 +126,6 @@ The controller part of this project has not been implemented yet. In this sectio
 ### Notes:
 
 - Ensure that your controller node efficiently processes pose information and generates appropriate control commands to ensure smooth and accurate vehicle movement.
+
+## Communication Graph
+![graph of communication](graph.png)
